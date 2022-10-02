@@ -2,82 +2,529 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Barlow Semi Condensed";
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-    background-image: url(/img/barbershop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-        
+main {
+  height: auto;
+  margin-top: 500px;
 }
+
+/* Header area */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
-  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/img/banner-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-
-.container {
-  width: 100%;
-  background-color: beige;
-  display: flex;
-  justify-content: space-evenly;
-  position: fixed;
-}
-
-.logo a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav {
-  display: flex;
-  padding: 22px 22px;
-  list-style: none;
-}
-
-.nav li a {
-  color: #fff;
-  padding: 12px 22px;
-  text-decoration: none;
-}
-
-.nav li a:hover {
-  background-color: burlywood;
-}
-
-h1 {
-  font-family: "Barlow Semi Condensed";
-  font-size: 22px;
-  color: #fff;
-}
-
-h2 {
-  color: #fff;
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.navbar {
   color: white;
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: rgba(20, 27, 37, 0.3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
 }
 
-.hero-text h2 {
-  font-size: 15px;
-  color: blanchedalmond;
+.menu {
+  position: absolute;
+  right: 5%;
+  display: none;
+}
 
+.nav-right ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  font-weight: 500;
+}
 
+.nav-right ul li {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
 
-/* .logo h2 { 
-    margin-right: 50px;
-    padding-top: 17px;
-    */
+.nav-right ul li:hover {
+  color: rgb(191 146 91);
+}
+
+.banner-container {
+  display: flex;
+  height: calc(100% - 76.67px);
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 260px;
+  color: white;
+}
+
+.banner-content {
+  width: 650px;
+  height: 500px;
+}
+
+.banner-content .sub-heading {
+  color: rgb(191 146 91);
+}
+
+.banner-content .heading {
+  font-size: 50px;
+  line-height: 65px;
+}
+
+.banner-content .heading span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.banner-desc {
+  padding-left: 80px;
+  margin-top: 30px;
+  border-left: 4px solid rgb(191 146 91);
+}
+
+.banner-desc p {
+  line-height: 30px;
+  opacity: 0.8;
+  width: 90%;
+}
+
+.banner-desc button {
+  margin-top: 40px;
+  background-color: transparent;
+  border: 2px solid rgb(191 146 91);
+  color: rgb(191 146 91) !important;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.banner-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 400px;
+}
+
+.banner-bottom .card {
+  background-color: rgb(191 146 91);
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  position: relative;
+}
+.banner-bottom .card-2,
+.banner-bottom .card-4 {
+  background-color: #b88649;
+}
+
+.banner-bottom .card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: absolute;
+  top: -25%;
+}
+
+.banner-bottom .card .title {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.banner-bottom .card .desc {
+  text-align: center;
+  line-height: 35px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* Header ^^ */
+
+/* ABOUT BARBER  */
+
+.about-barber {
+  background-color: white;
+  width: 100%;
+  height: 100vh !important;
+  padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.about-barber .about-barber-right img {
+  height: 750px;
+}
+
+.about-barber .about-barber-left .sub-heading {
+  color: rgb(191 146 91);
+  font-size: 22px;
+}
+
+.about-barber .about-barber-left .heading {
+  color: #333;
+  font-size: 55px;
+  line-height: 70px;
+}
+
+.about-barber .about-barber-left .about-barber-desc {
+  color: #333;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 40px 0;
+  width: 80%;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.about-barber .about-barber-left .badge {
+  width: 60%;
+  height: 100px;
+  background-color: rgb(191 146 91);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.about-barber .about-barber-left .icon-cont {
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-barber .about-barber-left .icon-cont img {
+  width: 35px;
+  height: 35px;
+}
+
+.about-barber .about-barber-left .content h2 {
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+
+.about-barber .about-barber-left .content p {
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+  line-height: 18px;
+}
+
+/* ABOUT BARBER ^^ */
+
+/* TESTIMONIALS  */
+
+.testimonials-container {
+  height: 100vh;
+  background-color: #eae8de;
+  margin-top: 70px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-cont {
+  text-align: center;
+}
+
+.heading-cont h3 {
+  color: rgb(191 146 91);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.heading-cont h1 {
+  color: #333;
+  font-size: 45px;
+  line-height: 60px;
+}
+
+.review-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-top: 70px;
+}
+
+.review-card .card {
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  border-radius: 8px;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.review-card .card p {
+  font-size: 18px;
+  color: #333;
+  opacity: 0.9;
+  margin-top: 8px;
+  line-height: 30px;
+}
+
+.review-card .card .icon-cont {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  background-color: rgb(191 146 91);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-card .card .icon-cont img {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+}
+
+.review-card .card .card-footer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.review-card .card .footer-left {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.review-card .card .footer-right .start-icon-cont {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-card .card .footer-right .start-icon-cont img {
+  width: 15px;
+}
+
+.review-card .card .footer-right h3 {
+  color: #333;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.review-card .card .footer-right h5 {
+  color: rgb(191 146 91);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* TESTIMONIALS ^^*/
+
+/* FOOTER */
+
+footer {
+  background-color: rgb(20 27 37);
+  padding: 60px 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  color: white;
+}
+
+.footer-cont h2 {
+  margin-bottom: 30px;
+}
+
+.footer-cont p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.social-link-cont {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-link-cont div {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(191 146 91);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.social-link-cont div img {
+  width: 20px;
+  height: 20px;
+}
+.footer-link {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-right-cont {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px !important;
+}
+.footer-right-cont,
+p {
+  margin: 0;
+}
+
+.footer-right-icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* FOOTER ^^ */
+
+/* Media query för responsivitet */
+
+@media only screen and (max-width: 767px) {
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./assets/img/banner-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    margin-top: 1700px;
+  }
+
+  .navbar {
+    background-color: rgb(20 27 37);
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+  }
+
+  .nav-right ul {
+    background-color: rgb(20 27 37);
+    position: fixed;
+    top: 76px;
+    left: -100%;
+    width: 100%;
+    min-height: calc(100vh - 76px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    z-index: 10;
+  }
+  .menu-open {
+    left: 0% !important;
+  }
+
+  .banner-container {
+    padding: 20px;
+  }
+  .banner-bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .banner-bottom .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+  }
+
+  .about-barber {
+    padding: 0px 20px;
+    flex-direction: column;
+  }
+
+  .about-barber-right img {
+    width: 100%;
+  }
+
+  .about-barber .about-barber-left .sub-heading {
+    margin-bottom: 10px;
+  }
+
+  .about-barber .about-barber-left .heading {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .about-barber .about-barber-left .about-barber-desc {
+    font-size: 16px;
+    line-height: 28px;
+    width: 100%;
+  }
+
+  .testimonials-container {
+    height: auto;
+    background-color: #eae8de;
+    margin-top: 600px;
+    padding: 50px 20px;
+  }
+
+  .heading-cont h3 {
+    color: rgb(191 146 91);
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .heading-cont h1 {
+    color: #333;
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .review-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    margin-top: 70px;
+  }
+
+  footer {
+    background-color: rgb(20 27 37);
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    color: white;
+  }
+}
