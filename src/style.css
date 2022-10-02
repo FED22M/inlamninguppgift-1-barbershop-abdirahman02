@@ -529,3 +529,85 @@
     }
   }
   
+  @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .banner-container {
+      display: flex;
+      height: calc(100% - 76.67px);
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 100px;
+      color: white;
+    }
+  
+    .banner-content {
+      width: 650px;
+      height: 500px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .banner-bottom {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .banner-bottom .card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+    }
+  
+    .banner-bottom .card {
+      background-color: rgb(191 146 91);
+    }
+    .banner-bottom .card:nth-child(2) {
+      background-color: #b88649;
+    }
+    .banner-bottom .card:nth-child(3) {
+      background-color: #b88649;
+    }
+  
+    main {
+      margin-top: 800px;
+    }
+  
+    .about-barber {
+      height: auto !important;
+      padding: 0px 20px;
+      gap: 40px;
+    }
+  
+    .about-barber .about-barber-right img {
+      height: 750px;
+    }
+  
+    .about-barber .about-barber-left .sub-heading {
+      color: rgb(191 146 91);
+      font-size: 22px;
+    }
+  
+    .about-barber .about-barber-left .heading {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  
+    .about-barber .about-barber-left .about-barber-desc {
+      width: 100%;
+    }
+  
+    .testimonials-container {
+      height: auto;
+      background-color: #eae8de;
+      padding: 50px 20px;
+    }
+  
+    .heading-cont h1 {
+      line-height: 45px;
+    }
+  
+    .review-card {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 40px;
+    }
+  }
