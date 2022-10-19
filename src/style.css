@@ -315,7 +315,7 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color: green;
+    background-color: rgb(102, 96, 96);
   }
   
   .review-card .card .footer-right .start-icon-cont {
@@ -345,7 +345,7 @@
   /* FOOTER */
   
   footer {
-    background-color: rgb(20 27 37);
+    background-color: rgb(3, 3, 3);
     padding: 60px 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
